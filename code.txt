@@ -1,0 +1,17 @@
+fhand=open("D://sample_output.txt")
+d={}
+for i in fhand:
+    i=i.strip().split(": ")   
+    if len(i)==2:
+        d[i[0]]=int(i[1])
+print(d)
+n=int(input())
+a=[]
+print("Number of the employees:",n)
+print("Here the goodies that are selected for distribution are:")
+for i in range(n):
+    x=input()
+    a=a+[d[x]]
+    print(x,d[x])
+print("And the difference between the chosen goodie with highest price and the lowest price is",max(a)-min(a))
+    
